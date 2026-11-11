@@ -130,3 +130,8 @@ After execution completes, launch the interactive HTML report to view execution 
 ```bash
 npx playwright show-report
 ```
+
+Below is the generated HTML report after successfully executing the Playwright E2E automation suite. The tests cover both positive user journeys and defensive edge cases:
+
+![Playwright Test Report](assets/report.png.png)
+---
