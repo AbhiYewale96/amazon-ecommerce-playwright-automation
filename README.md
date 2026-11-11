@@ -4,6 +4,16 @@ A robust, production-ready UI & API automation framework built with **Playwright
 
 ---
 
+## 🛠️ Tech Stack
+
+* **Testing Framework:** Playwright
+* **Programming Language:** TypeScript
+* **Design/Architecture Pattern:** Page Object Model (POM)
+* **Testing Approach:** End-to-End (E2E) UI Automation & Defensive Search Validation
+* **CI/CD Pipeline:** GitHub Actions
+
+---
+
 ## 📌 Project Overview & Architecture
 
 The framework is structured using modular design patterns to decouple test specifications from DOM selectors and underlying page logic.
