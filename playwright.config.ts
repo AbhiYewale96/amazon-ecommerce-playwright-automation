@@ -11,7 +11,7 @@ export default defineConfig({
   reporter: [['html', { open: 'always' }], ['list']],
   use: {
     baseURL: 'https://www.amazon.com',
-    headless: false, // Run in headed mode to visually observe test execution
+    headless: process.env.CI ? true : false, // Run in headed mode to visually observe test execution
     launchOptions: {
       slowMo: 800, // Slow down actions slightly to make manual inspection easier
     },
