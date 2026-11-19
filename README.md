@@ -1,5 +1,7 @@
 # Amazon E-Commerce End-to-End Test Automation Suite
 
+[![Playwright Tests](https://github.com/AbhiYewale96/amazon-ecommerce-playwright-automation/actions/workflows/playwright.yml/badge.svg)](https://github.com/AbhiYewale96/amazon-ecommerce-playwright-automation/actions/workflows/playwright.yml)
+
 A robust, production-ready UI & API automation framework built with **Playwright**, **TypeScript**, and the **Page Object Model (POM)** architecture. This suite automates critical user journeys on Amazon, covering catalog discovery, defensive search scenarios, cart security boundaries, and authentication input validations.
 
 ---
@@ -28,6 +30,9 @@ The framework is structured using modular design patterns to decouple test speci
 ## 📂 Repository Structure
 
 ```text
+├── .github/
+│   └── workflows/
+│       └── playwright.yml     # GitHub Actions CI/CD pipeline for automated test runs
 ├── pages/
 │   ├── HomePage.ts            # Amazon home navigation, search bar interactions & geo-modals
 │   ├── SearchResultsPage.ts   # Product catalog parsing, filters, and zero-result state checks
@@ -78,7 +83,7 @@ Clone the repository and install project dependencies alongside Playwright brows
 
 ```bash
 # Clone the repository
-git clone [https://github.com/AbhiYewale96/amazon-ecommerce-playwright-automation.git](https://github.com/AbhiYewale96/amazon-ecommerce-playwright-automation.git)
+git clone https://github.com/AbhiYewale96/amazon-ecommerce-playwright-automation.git
 
 # Navigate into the project folder
 cd amazon-ecommerce-playwright-automation
@@ -123,6 +128,15 @@ npx playwright test tests/negative_auth.spec.ts
 
 ---
 
+## 🔄 Continuous Integration (GitHub Actions)
+
+This repository is integrated with **GitHub Actions** (`.github/workflows/playwright.yml`) to ensure continuous quality verification:
+- **Automated Triggers:** Runs automatically on every `push` and `pull_request` to `main`, plus supports manual execution via `workflow_dispatch`.
+- **Environment-Aware Execution:** Dynamically switches to headless mode in CI (`process.env.CI`) while preserving headed execution for local debugging.
+- **Artifact Retention:** Automatically uploads the generated `playwright-report` after every CI run for 30 days.
+
+---
+
 ## 📊 Viewing Test Reports & Artifacts
 
 After execution completes, launch the interactive HTML report to view execution timelines, error logs, and DOM snapshots:
@@ -134,4 +148,5 @@ npx playwright show-report
 Below is the generated HTML report after successfully executing the Playwright E2E automation suite. The tests cover both positive user journeys and defensive edge cases:
 
 ![Playwright Test Report](assets/report.png.png)
+
 ---
